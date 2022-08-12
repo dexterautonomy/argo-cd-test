@@ -1,10 +1,10 @@
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app1
 spec:
-  minAvailable: 3
   replicas: 4
   selector:
     matchLabels:
