@@ -58,8 +58,8 @@ metadata:
   labels:
     app: app1
 spec:
-  minReplicas: 6
-  maxReplicas: 10
+  minReplicas: 3
+  maxReplicas: 5
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
