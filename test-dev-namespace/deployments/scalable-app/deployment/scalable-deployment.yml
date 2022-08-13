@@ -28,3 +28,20 @@ spec:
             cpu: "125m"
         ports:
         - containerPort: 8990
+        
+---
+apiVersion: v1
+kind: HorizontalPodAutoscaler
+metadata: 
+  name: scalable-hpa
+  namespace: applications
+  labels:
+    app: app1
+spec:
+  minReplicas: 2
+  maxReplicas: 4
+  scaleTargetRef:
+    apiVersion: v1
+    kind: Deployment
+    name: app1
+  targetCPUUtilizationPercentage: 90
