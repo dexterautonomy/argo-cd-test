@@ -21,6 +21,9 @@ spec:
       - name: app1
         image: chineduezeigbo/scalable-capital:latest
         resources:
+          requests:
+            cpu: "125m"
+            memory: "256Mi"
           limits:
             memory: "512Mi"
             cpu: "125m"
